@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StateView">
+        <attr name="show_view" format="enum">
+            <enum name="content" value="0"/>
+            <enum name="loading" value="1"/>
+            <enum name="retry" value="2"/>
+            <enum name="empty" value="3"/>
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">StateView</string>
+    <string name="connection_error">connection error</string>
+</resources>
