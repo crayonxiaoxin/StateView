@@ -55,13 +55,13 @@ public class StateView extends FrameLayout {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        Log.e("ORM", "StateView: " + getChildCount());
+//        Log.e("ORM", "StateView: " + getChildCount());
     }
 
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        Log.e("ORM", "StateView: " + getChildCount());
+//        Log.e("ORM", "StateView: " + getChildCount());
         if (getChildCount() == 1) {
             setView(State.CONTENT);
             showView(showViewType);
