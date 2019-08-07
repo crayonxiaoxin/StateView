@@ -21,8 +21,7 @@ compile 'com.lau:StateView:1.0.0'
 <com.lau.StateView
     android:id="+id/stateView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:show_view="retry">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/your_content"
