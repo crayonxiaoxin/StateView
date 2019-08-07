@@ -5,16 +5,6 @@
 compile 'com.lau:StateView:1.0.1'
 ```
 
-## Maven引入
-```java
-<dependency>
-	<groupId>com.lau</groupId>
-	<artifactId>StateView</artifactId>
-	<version>1.0.1</version>
-	<type>pom</type>
-</dependency>
-```
-
 ## 使用方法
 ### Xml【注意：只能有一个子view或viewgroup】
 ```xml
