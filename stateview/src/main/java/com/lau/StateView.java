@@ -55,13 +55,11 @@ public class StateView extends FrameLayout {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-//        Log.e("ORM", "StateView: " + getChildCount());
     }
 
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-//        Log.e("ORM", "StateView: " + getChildCount());
         if (getChildCount() == 1) {
             setView(State.CONTENT);
             showView(showViewType);
@@ -95,12 +93,12 @@ public class StateView extends FrameLayout {
         if (state == State.CONTENT) {
             contentView = getView(state);
         }
-        View view=views.get(state,null);
-        if (view==null){
+        View view = views.get(state, null);
+        if (view == null) {
             views.put(state, getView(state));
-        }else{
+        } else {
             views.remove(state);
-            views.put(state,getView(state));
+            views.put(state, getView(state));
         }
     }
 
@@ -121,13 +119,26 @@ public class StateView extends FrameLayout {
         setView(State.LOADING);
     }
 
-    public void setRetryResID(int resID) {
+    public void setRetryResID(int resID, setOnRetry listener) {
         this.LAYOUT_RETRY = resID;
         setView(State.RETRY);
+        if (listener != null) {
+            listener.onRetry(getView(State.RETRY));
+        }
+    }
+
+    public void setRetryListener(setOnRetry listener) {
+        if (listener != null) {
+            listener.onRetry(getView(State.RETRY));
+        }
     }
 
     public void setEmptyResID(int resID) {
         this.LAYOUT_EMPTY = resID;
         setView(State.EMPTY);
+    }
+
+    public interface setOnRetry {
+        void onRetry(View retryView);
     }
 }
