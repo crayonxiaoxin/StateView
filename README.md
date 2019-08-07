@@ -1,14 +1,12 @@
 # StateView
 
 ## Gradle引入
-
-```
+```java
 compile 'com.lau:StateView:1.0.0'
 ```
 
 ## Maven引入
-
-```
+```java
 <dependency>
 	<groupId>com.lau</groupId>
 	<artifactId>StateView</artifactId>
@@ -18,9 +16,8 @@ compile 'com.lau:StateView:1.0.0'
 ```
 
 ## 使用方法
-
 ### Xml【注意：只能有一个子view或viewgroup】
-```
+```xml
 <com.lau.StateView
     android:id="+id/stateView"
     android:layout_width="match_parent"
@@ -43,8 +40,7 @@ compile 'com.lau:StateView:1.0.0'
 ```
 
 ### java
-
-```
+```java
 @Override
 public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
@@ -68,16 +64,14 @@ public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceStat
 ```
 
 ### 四种状态
-
-```
+```java
 stateView.showView(StateView.State.LOADING);//加载
 stateView.showView(StateView.State.RETRY);//重试
 stateView.showView(StateView.State.CONTENT);//内容
 stateView.showView(StateView.State.EMPTY);//空
 ```
 ### 通过以下方式自定义layout
-
-```
+```java
 public void setLoadingResID(int resID)
 public void setRetryResID(int resID,setOnRetry listener)
 public void setEmptyResID(int resID)
