@@ -52,13 +52,13 @@ public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceStat
                 @Override
                 public void onClick(View v) {
                     stateView.showView(StateView.State.LOADING);
-                    initData();
+                    initData();// load data
                 }
             });
         }
     });
     stateView.showView(StateView.State.LOADING);
-    initData();
+    initData();// load data
 }
 ```
 
