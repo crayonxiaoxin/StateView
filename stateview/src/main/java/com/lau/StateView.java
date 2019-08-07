@@ -68,7 +68,7 @@ public class StateView extends FrameLayout {
         }
     }
 
-    public View getView(int state) {
+    private View getView(int state) {
         View view = views.get(state);
         if (view == null) {
             switch (state) {
@@ -89,7 +89,7 @@ public class StateView extends FrameLayout {
         return view;
     }
 
-    public void setView(int state) {
+    private void setView(int state) {
         if (state == State.CONTENT) {
             contentView = getView(state);
         }
@@ -102,7 +102,7 @@ public class StateView extends FrameLayout {
         }
     }
 
-    public void showView(int state) {
+    private void showView(int state) {
         for (int i = 0; i < getChildCount(); i++) {
             if (getChildAt(i) != contentView) {
                 removeViewAt(i);
@@ -114,17 +114,38 @@ public class StateView extends FrameLayout {
         }
     }
 
-    public void setLoadingResID(int resID) {
+    public void setLoadingLayout(int resID) {
         this.LAYOUT_LOADING = resID;
         setView(State.LOADING);
     }
 
-    public void setRetryResID(int resID, setOnRetry listener) {
+    public void setRetryLayout(int resID, setOnRetry listener) {
         this.LAYOUT_RETRY = resID;
         setView(State.RETRY);
         if (listener != null) {
             listener.onRetry(getView(State.RETRY));
         }
+    }
+
+    public void setEmptyLayout(int resID) {
+        this.LAYOUT_EMPTY = resID;
+        setView(State.EMPTY);
+    }
+
+    public View getLoadingLayout() {
+        return getView(State.LOADING);
+    }
+
+    public View getContentLayout() {
+        return getView(State.CONTENT);
+    }
+
+    public View getRetryLayout() {
+        return getView(State.RETRY);
+    }
+
+    public View getEmptyLayout() {
+        return getView(State.EMPTY);
     }
 
     public void setRetryListener(setOnRetry listener) {
@@ -133,12 +154,24 @@ public class StateView extends FrameLayout {
         }
     }
 
-    public void setEmptyResID(int resID) {
-        this.LAYOUT_EMPTY = resID;
-        setView(State.EMPTY);
-    }
-
     public interface setOnRetry {
         void onRetry(View retryView);
     }
+
+    public void showLoading() {
+        showView(State.LOADING);
+    }
+
+    public void showContent() {
+        showView(State.CONTENT);
+    }
+
+    public void showRetry() {
+        showView(State.RETRY);
+    }
+
+    public void showEmpty() {
+        showView(State.EMPTY);
+    }
+
 }
