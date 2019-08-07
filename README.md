@@ -2,17 +2,7 @@
 
 ## Gradle引入
 ```java
-compile 'com.lau:StateView:1.0.0'
-```
-
-## Maven引入
-```java
-<dependency>
-	<groupId>com.lau</groupId>
-	<artifactId>StateView</artifactId>
-	<version>1.0.0</version>
-	<type>pom</type>
-</dependency>
+compile 'com.lau:StateView:1.0.1'
 ```
 
 ## 使用方法
