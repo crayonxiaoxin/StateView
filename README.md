@@ -2,7 +2,7 @@
 
 ## Gradle引入
 ```java
-compile 'com.lau:StateView:1.0.0'
+compile 'com.lau:StateView:1.0.1'
 ```
 
 ## Maven引入
@@ -10,7 +10,7 @@ compile 'com.lau:StateView:1.0.0'
 <dependency>
 	<groupId>com.lau</groupId>
 	<artifactId>StateView</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<type>pom</type>
 </dependency>
 ```
