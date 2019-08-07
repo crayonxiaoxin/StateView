@@ -1,5 +1,7 @@
 # StateView
 
+![image](https://github.com/crayonxiaoxin/StateView/blob/master/images/demo.gif)
+
 ## Gradle引入
 ```java
 compile 'com.lau:StateView:1.0.1'
