@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">StateViewDemo</string>
+    <string name="your_content">this is your content</string>
 </resources>

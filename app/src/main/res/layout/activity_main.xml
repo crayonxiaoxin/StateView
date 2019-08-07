@@ -7,11 +7,12 @@
     tools:context=".MainActivity">
 
     <com.lau.StateView
+        android:id="@+id/stateView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:show_view="retry">
+        android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/your_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -19,9 +20,8 @@
 
             <TextView
                 android:layout_width="wrap_content"
-
                 android:layout_height="wrap_content"
-                android:text="@string/connection_error" />
+                android:text="@string/your_content" />
         </LinearLayout>
     </com.lau.StateView>
 
