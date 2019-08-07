@@ -4,7 +4,7 @@
 
 ## Gradle引入
 ```java
-compile 'com.lau:StateView:1.0.1'
+compile 'com.lau:StateView:1.0.2'
 ```
 
 ## 使用方法
@@ -43,27 +43,27 @@ public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceStat
             retryView.findViewById(R.id.base_retry).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    stateView.showView(StateView.State.LOADING);
+                    stateView.showLoading();
                     initData();// load data
                 }
             });
         }
     });
-    stateView.showView(StateView.State.LOADING);
+    stateView.showLoading();
     initData();// load data
 }
 ```
 
 ### 四种状态
 ```java
-stateView.showView(StateView.State.LOADING);//加载
-stateView.showView(StateView.State.RETRY);//重试
-stateView.showView(StateView.State.CONTENT);//内容
-stateView.showView(StateView.State.EMPTY);//空
+stateView.showLoading();//加载
+stateView.showRetry();//重试
+stateView.showContent();//内容
+stateView.showEmpty();//空
 ```
 ### 通过以下方式自定义layout
 ```java
-public void setLoadingResID(int resID)
-public void setRetryResID(int resID,setOnRetry listener)
-public void setEmptyResID(int resID)
+public void setLoadingLayout(int resID)
+public void setRetryLayout(int resID,setOnRetry listener)
+public void setEmptyLayout(int resID)
 ```
