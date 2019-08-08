@@ -1,4 +1,4 @@
-# StateView
+# StateView  [ ![Download](https://api.bintray.com/packages/lau/StateView/StateView/images/download.svg?version=1.0.2) ](https://bintray.com/lau/StateView/StateView/1.0.2/link)
 
 ![image](https://github.com/crayonxiaoxin/StateView/blob/master/images/demo.gif)
 
