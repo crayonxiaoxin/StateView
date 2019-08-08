@@ -25,7 +25,7 @@ compile 'com.lau:StateView:1.0.2'
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/connection_error" />
+            android:text="@string/you_text" />
     </LinearLayout>
 </com.lau.StateView>
 ```
@@ -37,7 +37,7 @@ public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceStat
     super.onViewCreated(view, savedInstanceState);
     stateView = view.findViewById(R.id.stateView);
     //重写retry layout，提供retry点击接口
-    stateView.setRetryResID(R.layout.base_retry, new StateView.setOnRetry() {
+    stateView.setRetryLayout(R.layout.base_retry, new StateView.setOnRetry() {
         @Override
         public void onRetry(View retryView) {
             retryView.findViewById(R.id.base_retry).setOnClickListener(new View.OnClickListener() {
