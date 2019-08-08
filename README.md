@@ -4,7 +4,7 @@
 
 ## Gradle引入
 ```java
-compile 'com.lau:StateView:1.0.2'
+implementation 'com.lau:StateView:1.0.2'
 ```
 
 ## 使用方法
